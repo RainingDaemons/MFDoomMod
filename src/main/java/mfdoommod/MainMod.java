@@ -40,9 +40,28 @@ public class MainMod {
         ItemRegistry.registerItem("mfdoom_boots", new MFDoomBoots(), 50, true);
 
         // Register music
-        GameMusic RappSnitch;
-        RappSnitch = MusicRegistry.registerMusic("rappsnitch", "music/rappsnitch", (GameMessage)null, new StaticMessage("Rapp Snitch Knishes"), new Color(255, 0, 81), new Color(255, 0, 81));
-        ItemRegistry.registerItem(RappSnitch.getStringID() + "vinyl", new VinylItem(RappSnitch), 50.0F, true, false);
+        GameMusic MF_RappSnitch, MF_Raid, MF_AllCaps, MF_GreatDay, MF_Accordion, MF_GoWFlow, MF_Doomsday, MF_Figaro, MF_ThatsThat, MF_Ballskin;
+
+        MF_RappSnitch = MusicRegistry.registerMusic("mf_rappsnitch", "music/rappsnitch", (GameMessage)null, new StaticMessage("Rapp Snitch Knishes"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_RappSnitch.getStringID() + "vinyl", new VinylItem(MF_RappSnitch), 50.0F, true, false);
+        MF_Raid = MusicRegistry.registerMusic("mf_raid", "music/raid", (GameMessage)null, new StaticMessage("Raid"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_Raid.getStringID() + "vinyl", new VinylItem(MF_Raid), 50.0F, true, false);
+        MF_AllCaps = MusicRegistry.registerMusic("mf_allcaps", "music/allcaps", (GameMessage)null, new StaticMessage("All Caps"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_AllCaps.getStringID() + "vinyl", new VinylItem(MF_AllCaps), 50.0F, true, false);
+        MF_GreatDay = MusicRegistry.registerMusic("mf_greatday", "music/greatday", (GameMessage)null, new StaticMessage("Great Day"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_GreatDay.getStringID() + "vinyl", new VinylItem(MF_GreatDay), 50.0F, true, false);
+        MF_Accordion = MusicRegistry.registerMusic("mf_accordion", "music/accordion", (GameMessage)null, new StaticMessage("Accordion"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_Accordion.getStringID() + "vinyl", new VinylItem(MF_Accordion), 50.0F, true, false);
+        MF_GoWFlow = MusicRegistry.registerMusic("mf_gowflow", "music/gowflow", (GameMessage)null, new StaticMessage("Go With The Flow"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_GoWFlow.getStringID() + "vinyl", new VinylItem(MF_GoWFlow), 50.0F, true, false);
+        MF_Doomsday = MusicRegistry.registerMusic("mf_doomsday", "music/doomsday", (GameMessage)null, new StaticMessage("Doomsday"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_Doomsday.getStringID() + "vinyl", new VinylItem(MF_Doomsday), 50.0F, true, false);
+        MF_Figaro = MusicRegistry.registerMusic("mf_figaro", "music/figaro", (GameMessage)null, new StaticMessage("Figaro"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_Figaro.getStringID() + "vinyl", new VinylItem(MF_Figaro), 50.0F, true, false);
+        MF_ThatsThat = MusicRegistry.registerMusic("mf_thatsthat", "music/thatsthat", (GameMessage)null, new StaticMessage("That's That"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_ThatsThat.getStringID() + "vinyl", new VinylItem(MF_ThatsThat), 50.0F, true, false);
+        MF_Ballskin = MusicRegistry.registerMusic("mf_ballskin", "music/ballskin", (GameMessage)null, new StaticMessage("Ballskin"), new Color(255, 0, 81), new Color(255, 0, 81));
+        ItemRegistry.registerItem(MF_Ballskin.getStringID() + "vinyl", new VinylItem(MF_Ballskin), 50.0F, true, false);
     }
 
     public void initResources() {}
@@ -82,9 +101,90 @@ public class MainMod {
                 }
         ).showAfter("spaghettibolognese")); // Show recipe after fideos con salsa
 
-        // Rapp Snitch Vinyl
+        // Vinyls
         Recipes.registerModRecipe(new Recipe(
-                "rappsnitchvinyl",
+                "mf_rappsnitchvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_raidvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_allcapsvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_greatdayvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_accordionvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_gowflowvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_doomsdayvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_figarovinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_thatsthatvinyl",
+                1,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("macncheese", 1),
+                        new Ingredient("ironbar", 4)
+                }
+        ));
+        Recipes.registerModRecipe(new Recipe(
+                "mf_ballskinvinyl",
                 1,
                 RecipeTechRegistry.WORKSTATION,
                 new Ingredient[]{
